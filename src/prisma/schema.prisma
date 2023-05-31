@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("MONGODB_URI")
+}
+
+type UsersSettings {
+  emailNotification Boolean @default(true)
+  phoneNotification Boolean @default(false)
+  pushNotification  Boolean @default(true)
+}
+
+model User {
+  id         String        @id @default(auto()) @map("_id") @db.ObjectId
+  v          Int           @default(0) @map("__v")
+  admin      Boolean       @default(false)
+  createdAt  DateTime?      @default(now()) @db.Date 
+  email      String
+  isVerified Boolean       @default(false)
+  password   String
+  settings   UsersSettings?
+  updatedAt  DateTime?      @updatedAt
+  verificationToken String?
+}

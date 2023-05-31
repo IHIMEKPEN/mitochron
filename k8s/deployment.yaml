@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: plum
+  namespace: beta
+spec:
+  selector:
+    matchLabels:
+      app: plum
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: plum
+    spec:
+      containers:
+      - name: plum
+        image: dredgreat/plum
+        ports:
+          - containerPort: 3001
