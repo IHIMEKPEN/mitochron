@@ -1,8 +1,9 @@
 <p align="center">
-  Itana- Social Media APIs
+  Mitochron- Conference APIs
 </p>
 
-  <p align="center">The APIs  in this repo will be responsible for handling user interactions, posts, likes, comments, and search functionalities.</p>
+  <p align="center">The APIs in this repo will be responsible for an app for talks at a
+conference.</p>
     <p align="center">
 
 
@@ -62,4 +63,4 @@ docker push dredgreat/mitochron
 ```
 ## Documentation
 
-- Postman - (https://documenter.getpostman.com/view/19118805/2s93m8yLQc)
+- Postman - (https://documenter.getpostman.com/view/19118805/2s93mBweNn)

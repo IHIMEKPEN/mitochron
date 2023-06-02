@@ -1,3 +1,4 @@
 /** Interfaces nad Types */
-export { ITalk } from './talk.interface';
+export { ITalk ,IAttendee } from './talk.interface';
+export { IMessage} from './message.interface';
 
