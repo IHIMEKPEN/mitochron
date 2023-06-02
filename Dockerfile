@@ -1,6 +1,6 @@
 FROM node:16-alpine as build
 WORKDIR /server
-COPY package*.json .
+COPY package*.json ./
 RUN npm install
 COPY . .
 RUN npm run build
@@ -9,7 +9,7 @@ RUN npm run build
 FROM node:lts-alpine as production
 ENV NODE_ENV=production
 WORKDIR /server
-COPY package.json .
+COPY package.json ./
 COPY .env .
 RUN npm install --production --silent && mv node_modules ../
 COPY --from=build /server/dist ./dist
