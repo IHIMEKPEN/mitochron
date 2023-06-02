@@ -1,19 +1,18 @@
-FROM node:16-alpine AS build
-WORKDIR /usr/sr/app
-COPY package*.json ./
+FROM node:16-alpine as build
+WORKDIR /server
+COPY package*.json .
 RUN npm install
 COPY . .
 RUN npm run build
 
-
-FROM node:lts-alpine AS production
+# Production Image
+FROM node:lts-alpine as production
 ENV NODE_ENV=production
-WORKDIR /usr/sr/app
-COPY package*.json .
-RUN npm install --only=prod --silent && mv node_modules ../
-COPY . .
-COPY --from=build /usr/sr/app/dist ./dist
+WORKDIR /server
+COPY package.json .
+COPY .env .
+RUN npm install --production --silent && mv node_modules ../
+COPY --from=build /server/dist ./dist
 
 EXPOSE 3001
-
-CMD ["node", "dist/main"]
+CMD ["node", "dist/main.js"]
