@@ -51,8 +51,8 @@
   "networkMode": "awsvpc",
   "compatibilities": ["EC2"],
   "requiresCompatibilities": ["FARGATE"],
-  "cpu": "1024",
-  "memory": "6072",
+  "cpu": "4096",
+  "memory": "8192",
   "runtimePlatform": {
     "cpuArchitecture": "X86_64",
     "operatingSystemFamily": "LINUX"

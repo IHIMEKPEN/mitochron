@@ -11,7 +11,7 @@ export const ENVIRONMENT = process.env.NODE_ENV || 'development';
 export const CLIENT_URL = ENVIRONMENT == 'development' ? 'http://localhost' : process.env.CLIENT_URL 
 
 /** Environment and Database */
-export const PORT = process.env.PORT || 2023;
+export const PORT = process.env.PORT || 5000;
 export const WORKER = ENVIRONMENT == 'development' ? false: true
 export const MONGODB_URI = process.env.MONGODB_URI || `mongodb://localhost:27017/${APP_NAME}`;
 export const MONGODB_URI_TEST = process.env.MONGODB_URI_TEST || `mongodb://localhost:27017/${APP_NAME}_tests`;

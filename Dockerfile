@@ -14,5 +14,5 @@ COPY .env .
 RUN npm install --production --silent && mv node_modules ../
 COPY --from=build /server/dist ./dist
 
-EXPOSE 3001
+EXPOSE 5000
 CMD ["node", "dist/main.js"]
