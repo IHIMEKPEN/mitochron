@@ -64,3 +64,4 @@ docker push dredgreat/mitochron
 ## Documentation
 
 - Postman - (https://documenter.getpostman.com/view/19118805/2s93mBweNn)
+-https://app.getpostman.com/join-team?invite_code=8d3b2c98b57500d98589a50518ce94e9&target_code=b8f8be83024af4b7649e90b0837cf5b8 this will give access to the workspace where you can test the chat feature.
